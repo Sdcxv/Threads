@@ -29,7 +29,7 @@ public class BounceThread {
  */
 class BallRunnable implements Runnable {
     public static final int STEPS = 1000000;
-    public static final int DELAY = 5;
+    public static final int DELAY = 3;
     private Ball ball;
     private Component component;
 

@@ -1,5 +1,7 @@
 package com.sdcxv.synch;
 
+import java.util.Random;
+
 /**
  * A runnable that transfers money from an account to other accounts in a bank.
  *
@@ -26,12 +28,13 @@ public class TransferRunnable implements Runnable {
     }
 
     public void run() {
+        Random random = new Random();
         try {
             while (true) {
-                int toAccount = (int) (bank.size() * Math.random());
+                int toAccount = random.nextInt(bank.size());
                 double amount = maxAmount * Math.random();
                 bank.transfer(fromAccount, toAccount, amount);
-                Thread.sleep((int) (DELAY * Math.random()));
+                Thread.sleep(random.nextInt(DELAY));
             }
         } catch (InterruptedException e) {
         }

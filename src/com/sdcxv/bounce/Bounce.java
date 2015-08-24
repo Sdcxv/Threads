@@ -25,7 +25,7 @@ public class Bounce {
  */
 class BounceFrame extends JFrame {
     public static final int STEPS = 1000;
-    public static final int DELAY = 3;
+    public static final int DELAY = 1;
     private BallComponent comp;
 
     /**
